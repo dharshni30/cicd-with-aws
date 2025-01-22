@@ -1,3 +1,7 @@
-#!/bin/bash
-yum install -y httpd
+if ! [ -x "$(command -v docker)" ]; then
+  yum update -y
+  yum install docker -y
+  service docker start
+  usermod -a -G docker ec2-user
+fi
 
