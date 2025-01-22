@@ -1,1 +1,1 @@
-curl -f http://localhost:80 || exit 1
+curl -f http://localhost:8082 || exit 1
